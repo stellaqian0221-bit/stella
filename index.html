@@ -1,66 +1,176 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <title>Stella | 個人網站</title>
-    <style>
-        /* 這裡就是 CSS！負責把網頁變漂亮 */
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #F0F4F8; /* 柔和的藍灰色背景 */
-            color: #333333; 
-            max-width: 700px; 
-            margin: 50px auto; /* 讓內容置中 */
-            padding: 30px; 
-            line-height: 1.8;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stella Qian | 個人網站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // 設定專屬的顏色主題
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#111827', // 深灰色字體
+                        accent: '#2563EB',  // 專業的亮藍色
+                    }
+                }
+            }
         }
-        h1 { 
-            color: #2C3E50; 
-            border-bottom: 3px solid #3498DB; /* 標題下面的藍色底線 */
-            padding-bottom: 10px; 
-        }
-        .card { 
-            background: white; 
-            padding: 25px; 
-            border-radius: 12px; /* 圓角卡片 */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* 微微的陰影質感 */
-            margin-top: 20px; 
-        }
-        .tag { 
-            background-color: #E1F0FA; 
-            color: #3498DB; 
-            padding: 5px 12px; 
-            border-radius: 20px; 
-            font-size: 0.85em; 
-            font-weight: bold;
-            margin-right: 8px; 
-        }
-        a.btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #3498DB;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-        a.btn:hover { background-color: #2980B9; }
-    </style>
+    </script>
 </head>
-<body>
-    <h1>👋 哈囉！我是 Stella</h1>
-    <p>歡迎來到我的個人網站。我目前就讀於 <strong>系</strong>，熱愛寫程式與解決問題。</p>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-accent selection:text-white">
 
-    <div class="card">
-        <h2>🚀 精選專案</h2>
-        <ul>
-            <li><strong>C++ 貪食蛇遊戲：</strong>。 <br><span class="tag">C++</span> <span class="tag">Data Structure</span></li>
-            <br>
-            <li><strong>早餐店排隊優化：</strong> 運用等候理論分析校園周邊早餐店流程，減少顧客等待時間。 <br><span class="tag">工業工程</span> <span class="tag">統計分析</span></li>
-        </ul>
-    </div>
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-xl tracking-tight text-primary">Stella Qian</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-accent transition">關於我</a>
+                <a href="#projects" class="hover:text-accent transition">專案作品</a>
+                <a href="#skills" class="hover:text-accent transition">專業技能</a>
+                <a href="#contact" class="hover:text-accent transition">聯絡我</a>
+            </div>
+        </div>
+    </nav>
 
-    <a href="https://github.com/stellaqian0221-bit" class="btn">🔗 前往我的 GitHub</a>
+    <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 min-h-[80vh]">
+        <div class="flex-1 space-y-6">
+            <p class="text-accent font-semibold tracking-wide uppercase text-sm">NCKU IIM · Tainan, Taiwan</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-primary leading-tight tracking-tighter">
+                用邏輯與程式，<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan-500">優化真實世界。</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-xl leading-relaxed">
+                我是 Stella，目前就讀於成功大學工業資訊管理學系。我結合工業工程的分析思維與資訊科學的開發能力，致力於打造高效的系統與解決方案。
+            </p>
+            <div class="flex gap-4 pt-4">
+                <a href="#projects" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition shadow-lg shadow-gray-200">查看作品</a>
+                <a href="https://github.com/stellaqian0221-bit" target="_blank" class="bg-white text-primary border border-gray-200 px-6 py-3 rounded-lg font-medium hover:border-gray-300 hover:bg-gray-50 transition">GitHub</a>
+            </div>
+        </div>
+        <div class="flex-1 flex justify-center md:justify-end">
+            <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-tr from-gray-200 to-gray-100 rounded-full border-8 border-white shadow-2xl overflow-hidden flex items-center justify-center text-6xl">
+                👩🏻‍💻
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white border-y border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <p class="text-3xl font-bold text-primary">NCKU</p>
+                <p class="text-sm text-gray-500 mt-1">成功大學工資管系</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-primary">C++ / Java</p>
+                <p class="text-sm text-gray-500 mt-1">核心開發語言</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-primary">Data</p>
+                <p class="text-sm text-gray-500 mt-1">邏輯與數據結構</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-primary">Optimization</p>
+                <p class="text-sm text-gray-500 mt-1">流程與系統優化</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 max-w-4xl mx-auto">
+        <h2 class="text-sm font-bold text-accent tracking-widest uppercase mb-3">About Me</h2>
+        <h3 class="text-3xl md:text-4xl font-bold text-primary mb-8 leading-tight">連結技術與管理的橋樑。</h3>
+        <div class="text-lg text-gray-600 space-y-6 leading-relaxed">
+            <p>
+                我的學習旅程從工業管理出發，逐漸深入到資訊科學的領域。透過學習等候理論與統計學，我具備了發現系統瓶頸、分析數據的能力；而透過 C++ 與 Java 的扎實訓練，我擁有了將解決方案實作出來的技術力。
+            </p>
+            <p>
+                在過去的專案中，我曾運用工業工程的知識分析校園周邊早餐店的排隊流程，也曾從零開始實作經典的 C++ 貪食蛇遊戲。我認為最好的工程師不僅懂得寫出乾淨的程式碼，更懂得這段程式碼能為真實世界帶來什麼價值。
+            </p>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-sm font-bold text-accent tracking-widest uppercase mb-3">Selected Work</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-primary mb-12">精選專案作品</h3>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="group border border-gray-100 rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-gray-50">
+                    <div class="flex gap-2 mb-6">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">C++</span>
+                        <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs font-semibold">Data Structure</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-primary mb-3">貪食蛇遊戲開發 (Snake Game)</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        使用 C++ 實作的經典終端機遊戲。專案重點在於運用陣列與指標進行記憶體管理、優化螢幕刷新頻率以避免閃爍，並實作核心的遊戲迴圈邏輯。
+                    </p>
+                    <a href="https://github.com/stellaqian0221-bit" target="_blank" class="text-accent font-semibold inline-flex items-center group-hover:underline">
+                        查看 GitHub 原始碼 <span class="ml-1 transition-transform group-hover:translate-x-1">→</span>
+                    </a>
+                </div>
+
+                <div class="group border border-gray-100 rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-gray-50">
+                    <div class="flex gap-2 mb-6">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">工業工程</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">統計分析</span>
+                    </div>
+                    <h4 class="text-2xl font-bold text-primary mb-3">早餐店排隊系統優化分析</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        運用「等候理論 (Queuing Theory)」針對校園周邊高流量早餐店進行流程分析。透過收集抵達率與服務率數據，找出系統瓶頸並提出具體改善方案。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="text-sm font-bold text-accent tracking-widest uppercase mb-3">Capabilities</h2>
+        <h3 class="text-3xl md:text-4xl font-bold text-primary mb-12">專業技能</h3>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition">
+                <h4 class="text-xl font-bold text-primary mb-4 border-b pb-4">程式語言</h4>
+                <ul class="space-y-3 text-gray-600 font-medium">
+                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> C / C++</li>
+                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> Java</li>
+                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> Python</li>
+                </ul>
+            </div>
+            <div class="p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition">
+                <h4 class="text-xl font-bold text-primary mb-4 border-b pb-4">領域知識</h4>
+                <ul class="space-y-3 text-gray-600 font-medium">
+                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> 資料結構 (Data Structures)</li>
+                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> 作業研究 (Operations Research)</li>
+                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> 等候理論 (Queuing Theory)</li>
+                </ul>
+            </div>
+            <div class="p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition">
+                <h4 class="text-xl font-bold text-primary mb-4 border-b pb-4">工具與其他</h4>
+                <ul class="space-y-3 text-gray-600 font-medium">
+                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> Git / GitHub</li>
+                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> Markdown / LaTeX</li>
+                    <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accent"></span> VS Code</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-primary text-white py-20 px-6 mt-12">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">準備好交流了嗎？</h2>
+            <p class="text-gray-400 mb-10 text-lg">
+                無論是討論 C++ 開發技術、學術專案，還是純粹交個朋友，都歡迎與我聯繫！
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="mailto:你的信箱@gmail.com" class="bg-accent text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-500 transition shadow-lg">發送 Email</a>
+            </div>
+            <div class="mt-20 text-gray-500 text-sm">
+                &copy; 2026 Stella Qian. Built with HTML & Tailwind CSS.
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
