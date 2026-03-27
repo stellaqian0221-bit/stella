@@ -1,16 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <title>Stella's Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Stella | 個人網站</title>
+    <style>
+        /* 這裡就是 CSS！負責把網頁變漂亮 */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #F0F4F8; /* 柔和的藍灰色背景 */
+            color: #333333; 
+            max-width: 700px; 
+            margin: 50px auto; /* 讓內容置中 */
+            padding: 30px; 
+            line-height: 1.8;
+        }
+        h1 { 
+            color: #2C3E50; 
+            border-bottom: 3px solid #3498DB; /* 標題下面的藍色底線 */
+            padding-bottom: 10px; 
+        }
+        .card { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 12px; /* 圓角卡片 */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* 微微的陰影質感 */
+            margin-top: 20px; 
+        }
+        .tag { 
+            background-color: #E1F0FA; 
+            color: #3498DB; 
+            padding: 5px 12px; 
+            border-radius: 20px; 
+            font-size: 0.85em; 
+            font-weight: bold;
+            margin-right: 8px; 
+        }
+        a.btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498DB;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        a.btn:hover { background-color: #2980B9; }
+    </style>
 </head>
 <body>
-    <h1>哈囉！我是 Stella</h1>
-    <p>歡迎來到我的個人網站。</p>
-    <p>這是我正：</p>
-    <ul>
-        <li>C</li>
-        <li>早餐店案</li>
-    </ul>
-    <a href="https://github.com/stellaqian0221-bit">點此前往我的 GitHub</a>
+    <h1>👋 哈囉！我是 Stella</h1>
+    <p>歡迎來到我的個人網站。我目前就讀於 <strong>系</strong>，熱愛寫程式與解決問題。</p>
+
+    <div class="card">
+        <h2>🚀 精選專案</h2>
+        <ul>
+            <li><strong>C++ 貪食蛇遊戲：</strong>。 <br><span class="tag">C++</span> <span class="tag">Data Structure</span></li>
+            <br>
+            <li><strong>早餐店排隊優化：</strong> 運用等候理論分析校園周邊早餐店流程，減少顧客等待時間。 <br><span class="tag">工業工程</span> <span class="tag">統計分析</span></li>
+        </ul>
+    </div>
+
+    <a href="https://github.com/stellaqian0221-bit" class="btn">🔗 前往我的 GitHub</a>
 </body>
 </html>
